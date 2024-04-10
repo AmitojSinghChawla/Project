@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #388E3C;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative; /* Added position relative for positioning the features menu */
+        }
+        .profile-info {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .profile-info label {
+            font-weight: bold;
+            color: #333;
+        }
+        .profile-info span {
+            display: block;
+            margin-top: 5px;
+            color: #666;
+        }
+        .profile-picture {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-picture img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 4px solid #4CAF50;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0; /* Added margin 0 */
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background-color: #4CAF50;
+        }
+        nav ul li a:hover {
+            background-color: #388E3C;
+        }
+
+        /* Features Menu */
+        .button{
+
+        }
+        .features-menu {
+            position: absolute; /* Position absolute to place it at the top right corner */
+            top: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+        }
+/* 
+        .features-menu-toggle {
+            cursor: pointer;
+            font-size: 24px;
+            color: #666;
+        } */
+
+        .features-menu-toggle {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features-menu-toggle::after {
+    content: "\22EE"; /* Three dots character */
+    font-size: 20px;
+    color: #333;
+}
+
+
+        .features-menu-items {
+            display: none;
+            position: absolute;
+            top: 40px; /* Adjust as needed */
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .features-menu-items ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features-menu-items ul li {
+            margin-bottom: 10px;
+        }
+
+        .features-menu-items ul li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .features-menu-items ul li a:hover {
+            color: #4CAF50;
+        }
+
+        .show {
+            display: block !important; /* Override default display */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+    </header>
+    <div class="container">
+        <div class="profile-info">
+            <div class="profile-picture">
+                <img src="profile.jpg" alt="Profile Picture">
+            </div>
+            <label for="username">Username:</label>
+            <span id="username">AmitojSinghChawla</span>
+        </div>
+        <div class="profile-info">
+            <label for="email">Email:</label>
+            <span id="email">example@example.com</span>
+        </div>
+        <div class="profile-info">
+            <label for="bio">Bio:</label>
+            <p id="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim sem eu neque fermentum, at commodo ex hendrerit.</p>
+        </div>
+        <div class="profile-info">
+            <label for="location">Location:</label>
+            <span id="location">New York, USA</span>
+        </div>
+        <div class="profile-info">
+            <label for="joined">Joined:</label>
+            <span id="joined">April 10, 2024</span>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Edit Profile</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="button">
+    <div class="features-menu">
+        <div class="features-menu-toggle" onclick="toggleFeaturesMenu()">&#8942;</div>
+        <div class="features-menu-items" id="features-menu-items">
+            <ul>
+                <li><a href="#">Schedule Pickup</a></li>
+                <li><a href="#">Waste Manager</a></li>
+                <li><a href="#">Community Support</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script>
+        function toggleFeaturesMenu() {
+            var menu = document.getElementById("features-menu-items");
+            menu.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

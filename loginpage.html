@@ -47,13 +47,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   const userId = document.getElementById('userId').value;
   const password = document.getElementById('password').value;
 
-  // Check if the entered User ID matches the specified value
-  if (userId === "amitoj1503@gmail.com" && password === "Amitoj2003") {
-    // Redirect to a different page
-    window.location.href = "specific_page.html";
-  } else {
-    alert("Invalid User ID or Password");
-  }
+  // // Check if the entered User ID matches the specified value
+  // if (userId === "amitoj1503@gmail.com" && password === "Amitoj2003") {
+  //   // Redirect to a different page
+  //   window.location.href = "profilepage.html";
+  // } else {
+  //   alert("Invalid User ID or Password");
+  // }
 });
 
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
@@ -89,7 +89,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     <form id="loginForm">
       <input type="email" placeholder="Email" required>
       <input type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
+      <button type="submit"><a href="profilepage.html" class="btn">Login</a></button>
     </form>
   </section>
 
