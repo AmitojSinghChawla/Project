@@ -1,0 +1,64 @@
+body {}
+
+.header {
+
+    height: 5vh;
+    width: 100%;
+
+}
+
+.nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navleft {
+    text-align: center;
+    margin-left: -59px;
+    margin-right: -156px;
+    display: flex;
+    font-size: 14px;
+
+}
+
+.navleft img {
+    height: 32px;
+    margin-top: 7px;
+
+}
+
+.navcentre {}
+
+.navcentre ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+
+}
+
+.navcentre ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+
+
+}
+
+.navright{
+    
+    background-color: white;
+}
+
+.service-buttons{
+    display: flex;
+    background-color: white;
+}
+
+.buttons img{
+    
+}
