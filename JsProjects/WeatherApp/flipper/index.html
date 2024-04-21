@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            font-family: "Poppins";
+            font-size: 2rem;
+            color: white;
+            background-color: rgb(24, 1, 45);
+        }
+
+        .container {
+
+            width: 40vw;
+            margin-left: 30vw;
+
+
+
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 55px;
+           
+        }
+
+        #b1 {
+            background-color: red;
+            color: white;
+            padding: 20px;
+        }
+
+        #b2 {
+            background-color: green;
+            color: white;
+            padding: 20px;
+
+
+        }
+
+        #b3 {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+        }
+
+        #b4 {
+            background-color: white;
+            color: black;
+            padding: 20px;
+        }
+
+        .click {
+            text-align: center;
+            border: none;
+            border-radius: 6px;
+            padding: 20px;
+            /* background-color: #4CAF50;
+            
+            background-image: linear-gradient(to bottom, #4CAF50, #2E7D32); */
+
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            /* box shadow for 3D effect */
+        }
+
+        .click:hover {
+            filter: brightness(0.8);
+            /* change gradient on hover */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            /* increase box shadow on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="buttons">
+            <div id="b1" class="click" onclick="setcolor('red')">Red</div>
+            <div id="b2" class="click" onclick="setcolor('green')">Green</div>
+            <div id="b3" class="click" onclick="setcolor('blue')">Blue</div>
+            <div id="b4" class="click" onclick="randomcolor()">random</div>
+
+        </div>
+    </div>
+
+    <script>
+        let body = document.getElementsByTagName('body')[0]
+
+        function setcolor(name){
+            body.style.backgroundColor=name;
+
+        }
+        function randomcolor(){
+            let red = Math.round(Math.random()*255);
+            let green = Math.round(Math.random()*255);
+            let blue = Math.round(Math.random()*255);
+
+            let color =`rgb(${red},${green},${blue})`
+            body.style.backgroundColor=color;
+
+        }
+
+        setcolor("green");
+    </script>
+</body>
+
+</html>

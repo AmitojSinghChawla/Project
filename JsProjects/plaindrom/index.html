@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(63, 94, 251);
+            background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(70, 252, 213, 1) 76%);
+            font-size: 2rem;
+            font-family: "OpenSans";
+        }
+
+        .container {
+            margin-left: 23vw;
+            width: 50vw;
+
+            font-size: 2rem;
+            font-family: "OpenSans";
+            background-color: bisque;
+            padding: 0;
+            margin-top: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 51vh;
+            border-radius: 10px;
+        }
+
+
+
+        .check {
+            display: flex;
+            flex-wrap: nowrap;
+            padding: 20px;
+            background-color: rebeccapurple;
+            margin: -1rem;
+            width: 80%;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .check input {
+            
+            height: 2rem;
+            width: 80%;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+
+        .check button{
+            height: 39px;
+  width: 58px;
+  background-color: thistle;
+  border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="check">
+            <input type="text" id="inputtext" placeholder="Enter Your String">
+            <Button onclick="checker()">Check</Button>
+        </div>
+    </div>
+    <script>
+        const input = document.getElementById("inputtext")
+
+        function reversestring(input) {
+            return input.split("").reverse().join("")
+
+        }
+        function checker() {
+            const value = input.value;
+            const reverse = reversestring(value);
+            if (value == "") {
+                alert("No input")
+
+            } else if (value === reverse) {
+                alert("The Input Text is A Palindrome Hurray!")
+
+            } else {
+                alert("So sorry not a Plaindrome")
+            }
+
+            input.value = "";
+
+        }
+
+    </script>
+</body>
+
+</html>
