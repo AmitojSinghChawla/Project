@@ -36,34 +36,31 @@
             </div>
         </div>
         <script>
-            const apiKey = "dd17d7d5bf0b1ac1c577975a3ec00d5f7";
-            const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=Delhi&appid=';
+            const apiKey = "&appid=d17d7d5bf0b1ac1c577975a3ec00d5f7";
+            const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
+            const searchbox=document.querySelector(".search input");
+            const searchbtn=document.querySelector(".search button");
 
-            async function checkWeather() {
-                try {
-                    const response = await fetch(apiUrl + apiKey);
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    const data = await response.json();
-                    console.log(data);
-                    // You can update the DOM with the weather data here
-                } catch (error) {
-                    console.error('Error fetching weather:', error);
-                }
+            async function checkWeather(city) {
+
+                const response = await fetch(apiUrl+city+apiKey);
+
+                const data = await response.json();
+                console.log(data);
+
+                document.querySelector(".region").innerHTML = data.name;
+                document.querySelector(".temp").innerHTML = Math.round(data.main.temp)+ " °C";
+                document.querySelector(".humidity").innerHTML = data.main.humidity +"%";
+                document.querySelector(".Wind").innerHTML = data.wind.speed+"Km/h";
+
+
+
             }
+            searchbtn.addEventListener("click",()=>{
+                checkWeather(searchbox.value);
+            })
 
-            // Call the function to fetch weather data for Delhi
-            checkWeather();
 
-                // You can update the DOM with the weather data here
-            
-
-            // // Call this function when the search button is clicked
-            // document.querySelector('button').addEventListener('click', function () {
-            //     const cityName = document.querySelector('input').value;
-            //     checkWeather(cityName);
-            // });
             checkWeather();
         </script>
 </body>
