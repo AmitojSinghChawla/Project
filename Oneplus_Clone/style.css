@@ -1,5 +1,7 @@
 body {
-  ont-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',f Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'OnePlus Sans Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
+  overflow-x: hidden;
+
 }
 
 .header {
@@ -71,7 +73,7 @@ body {
   margin-right: -46px;
 }
 
-.buttons {
+.button {
   width: 30px;
   height: 32px;
 }
@@ -99,41 +101,143 @@ body {
 #imgfirstsection {
   width: 200%;
   height: auto;
-  margin-left: -47.5rem;
+  margin-left: -46.5rem;
 }
 
-.secondsideboxwithoffers {
+.secondsideboxwithoffers1 {
 
   position: absolute;
-
   margin-top: 32%;
+  margin-left: 11px;
 }
 
-.text {
-  margin-left: -10rem;
+#text1 {
+  margin-left: -12rem;
   font-family: 'OnePlus Sans Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
-  font-size: 14px;
-  font-weight: 396;
+  font-size: 16px;
+  font-weight: 593;
   margin-bottom: -13px;
+  color: black;
+  margin-top: 0rem;
+  line-height: 7px;
 }
 
-#learnmore{
-  font-size: 12px;
-  margin-left: 8px;
-  color: black;
+
+
+
+
+.smallbuttons {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin-left: 75px;
 }
+
+
+.buynow {
+
+  background-color: black;
+  color: white;
+  width: 9rem;
+  margin-left: -39px;
+  padding: 7px;
+  font-size: 12px;
+
+}
+
+.learnmore {
+  font-size: 12px;
+
+}
+
+/* Second Section of the page starts from here */
+
+
+
+
+.secondsideboxwithoffers {
+  position: absolute;
+  margin-top: 32%;
+  margin-left: -150px;
+  color: white;
+}
+
+#text2 {
+
+  margin: 1px;
+  line-height: 7px;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: -38px;
+}
+
+.smallbuttons2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin-left: 75px;
+}
+
+
+
+/* section 3 starts here */
+
+#text3 {
+  margin: 1px;
+  line-height: 7px;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: -38px;
+
+}
+
+
+/* We are Giving CSS to the card Section Classes from Here */
+
+
+
+
+.informationcards{
+
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 14px;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 4rem;
   
 
+.card{
 
-#buynow {
-  color: white;
-  background-color: black;
-  margin: 0px;
-  margin-left: 0px;
-  padding: 7px;
-  width: 126px;
-  margin-left: 22px;
-  height: auto;
-  margin-right:2px;
 
+
+
+    background-color: red;
+    width: 45%;
+    height: 28rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.cardimages{
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+.cardheading{
+  position: absolute;
 }
