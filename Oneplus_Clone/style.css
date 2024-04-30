@@ -1,36 +1,32 @@
 body {
   font-family: 'OnePlus Sans Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
   overflow-x: hidden;
-
-}
-
-.header {
-
-  height: 5vh;
-  width: 100%;
-  margin: -11px;
-  padding: 3px;
 }
 
 
 
 .nav {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: -4px;
-  font-family: 'OnePlus Sans Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
+  position: relative;
+  height: inherit;
+  width: 100%;
+  padding:0;
+  margin: 0;
+  background-color: #fff;
+  justify-content: space-evenly;
+  border-bottom: 0.5px solid rgb(208, 208, 208);
+
 }
+
 
 .navleft {
   text-align: center;
-  margin-left: -34px;
-  margin-right: -93px;
   display: flex;
   font-size: 13.5px;
   color: red;
   font-weight: bold;
+  position: relative ;
+  left: -4rem;
 
 }
 
@@ -40,18 +36,64 @@ body {
 
 }
 
-.navcentre {}
+.navcentre {
+  box-sizing: border-box;
+  position: relative;
+  font-size: 1pc;
+  line-height: 1.5;
+  color: #000;
+  font-weight: 400;
+  right: 3rem;
+}
+
+
 
 .navcentre ul {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
   align-items: center;
   list-style: none;
-  gap: 43px;
   font-size: 14px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 
 }
+
+.navcentre ul li{
+  height: 100%;
+}
+
+/* These are the href anchor tag Links in the navcentre bar */
+.linkcontainer{     
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  min-width: 40px;
+}
+
+
+/* Adding The Hovering Property To the link container */
+
+.linkcontainer::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px; /* Adjust the height to match the desired border thickness */
+  background-color: red;
+  transition: width 0.3s ease; /* Transition the width property */
+}
+
+.linkcontainer:hover::after {
+  width: 100%; /* Expand the width to 100% on hover */
+}
+
 
 .navcentre ul li a {
   text-decoration: none;
@@ -61,6 +103,8 @@ body {
 
 }
 
+
+/* This the rightmost Part of the Navbar with search cart and more options button */
 .navright {
 
   background-color: white;
@@ -86,14 +130,14 @@ body {
 
 .firstsideboxwithlogoname p {
   font-weight: 400;
-  font-family: 'OnePlus Sans Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
+  
 
 }
 
 .firstsideboxwithlogoname div {
   font-weight: 200;
   font-size: 36px;
-  font-family: 'OnePlus Sans Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
+  
 }
 
 
@@ -141,9 +185,7 @@ body {
   background-color: black;
   color: white;
   width: 9rem;
-  margin-left: -39px;
-  padding: 7px;
-  font-size: 12px;
+  
 
 }
 
@@ -201,8 +243,6 @@ body {
 
 
 .informationcards{
-
-
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -211,13 +251,10 @@ body {
   justify-content: center;
   align-content: center;
   margin-top: 4rem;
+}
   
 
 .card{
-
-
-
-
     background-color: red;
     width: 45%;
     height: 28rem;
@@ -227,7 +264,6 @@ body {
     justify-content: center;
     align-items: center;
   }
-}
 
 
 .cardimages{
@@ -240,4 +276,33 @@ body {
 
 .cardheading{
   position: absolute;
+  margin-top: -16rem;
+  margin-left: -23rem;
+}
+
+.cardheading div{
+  font-weight: 200;
+  font-weight: 200;
+  font-size: 32px;
+  
+
+}
+
+
+.lowerheading{
+  display: flex;
+  gap: 10px;
+  align-items: normal;
+  justify-content: unsafe;
+  margin-top: 23rem;
+}
+
+
+
+#card3 img, #card4 img {
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+#card3:hover img ,#card4:hover img {
+  transform: scale(1.2); /* Increase the scale to zoom in on hover */
 }
